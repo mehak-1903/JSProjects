@@ -1,0 +1,37 @@
+body{
+    background-color: #212121;
+    color: #fff;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+}
+
+.banner span{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+#clock{
+    font-size: 2.5em;
+    background-color: orange;
+    padding: 20px 80px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+}
