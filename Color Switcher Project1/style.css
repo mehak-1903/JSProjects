@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+}
+
+h1{
+    font-size: 2em;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+}
+.button{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
+
+#orangered{
+    background-color: orangered;
+}
+
+#purple{
+    background-color: purple;
+}
