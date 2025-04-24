@@ -55,7 +55,7 @@ function validateGuess(guess){
 function checkGuess(guess){
     //checking negative or more thn range or equal
     if(guess === randomNumber){
-        displayMessage('Huraahh!! You guess the right number');
+        displayMessage('Huraahh!! You guess the right number \u{1F973} \u{1F389}');
         endGame();
     }
     else if(guess < randomNumber){
