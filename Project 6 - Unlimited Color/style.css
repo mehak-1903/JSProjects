@@ -1,0 +1,24 @@
+body{
+    background: #212121;
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+
+button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-family: 'Varela Round', sans-serif;
+    background: #000;
+    border: none;
+}
+
+#start{
+    color: #fff;
+    background: rgb(20, 182, 20);
+}
+
+#stop{
+    color: #1d4be2;
+    background: #ee2579;
+}
