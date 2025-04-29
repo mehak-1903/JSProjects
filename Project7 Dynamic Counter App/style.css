@@ -1,0 +1,49 @@
+body{
+    background-color: #4f4d4d;
+    color: #fff;
+    text-align: center;
+}
+h2{
+    color: rgb(186, 218, 246);
+    font-size: 42px;
+}
+
+input{
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+#add{
+    background-color: teal;
+    padding: 15px 30px;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#subt{
+    background-color: rgb(231, 21, 119);
+    padding: 15px 30px;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clear{
+    background-color: rgb(233, 136, 167);
+    padding: 15px 30px;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
