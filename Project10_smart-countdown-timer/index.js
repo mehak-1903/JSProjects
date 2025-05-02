@@ -15,6 +15,7 @@
         if(difference <= 0){
             clearInterval(timerInterval);
             timerInterval = null;
+            document.getElementById('alarmSound').play();
 
             // Show 00: 00: 00
             document.getElementById('days').textContent = '00';
