@@ -8,16 +8,15 @@ body{
 
 
 .container{
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
 }
 
 h1{
-    font-size: 90px;
+    font-size: 80px;
     letter-spacing: 5px;
     font-family: 'Caveat', sans-serif;
     font-weight: 700;
@@ -38,7 +37,7 @@ h1{
 }
 
 .todo-app h2{
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #002765;
     text-align: center;
 }
@@ -145,4 +144,10 @@ ul li span:hover{
     border-radius: 30px;
     color: #fff;
     background-color: rgba(245, 235, 235, 0.5);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
 }
