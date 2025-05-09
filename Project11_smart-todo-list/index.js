@@ -1,28 +1,47 @@
 const addBtn = document.getElementById('add-btn');
 const input = document.getElementById('input-box');
 const taskList = document.querySelector('.list-container');
+const allTask = document.getElementById('all');
 
 let tasks = [];             // All tasks are stored in this empty list.
 
 //  saved values 
 
-function saveTask(){
+function saveTask() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 const savedTask = localStorage.getItem('tasks');
-if(savedTask){
+if (savedTask) {
     tasks = JSON.parse(savedTask);
     showTasks();
 }
 
+// All Task
+const showingResult = document.querySelector('.todo-app');
+const allResult = document.createElement('h2');
+
+allResult.textContent = `All Tasks: ${tasks.length}`;
+showingResult.appendChild(allResult)
+
+allTask.addEventListener('click', () => {
+   
+    allResult.textContent = `All Tasks: ${tasks.length}`;
+    showingResult.appendChild(allResult);
+
+    if(tasks.length === 0){
+        allResult.innerHTML = '';
+    }
+})
+
+// Add Button Click
 addBtn.addEventListener('click', () => {
-    
+
     // Input values ko lenge
     const taskText = input.value.trim();
 
-    if(taskText !== ''){
-        tasks.push({text: taskText, done: false});     // Adding to the list--- stored as an object
+    if (taskText !== '') {
+        tasks.push({ text: taskText, done: false });     // Adding to the list--- stored as an object
         input.value = '';         // clear input box
 
         saveTask();
@@ -33,20 +52,20 @@ addBtn.addEventListener('click', () => {
 
 // Showing tasks on screen
 
-function showTasks(){
+function showTasks() {
     taskList.innerHTML = '';      // clear old list
 
-    tasks.forEach((task , index) => {
+    tasks.forEach((task, index) => {
         const li = document.createElement('li');
 
         li.textContent = task.text;     // li mei tasks dalra hai
 
-        if(task.done){
-            li.style.textDecoration =  'line-through';
+        if (task.done) {
+            li.style.textDecoration = 'line-through';
         }
 
         // Creating and Adding Delete Button to the list
-        
+
         const deleteBtn = document.createElement('i');
         deleteBtn.className = 'fas fa-trash';     // Font awesome icon
 
@@ -78,13 +97,13 @@ function showTasks(){
 
         editText.addEventListener('click', () => {
             const newText = prompt("Enter your Text: ", task.text);
-            if(newText !== null && newText.trim() !== ''){
+            if (newText !== null && newText.trim() !== '') {
                 tasks[index].text = newText.trim();
             }
             saveTask();
             showTasks()
         })
-        
+
         li.appendChild(editText);
         li.appendChild(doneBtn);
         li.appendChild(deleteBtn);      // adding icon with the list
