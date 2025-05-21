@@ -1,0 +1,74 @@
+
+body{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.wrapper{
+    background-color: #333;
+    color: #fff;
+    padding-bottom: 20px;
+    width: 40%;
+    margin: auto;
+}
+
+.wrapper h1{
+    background-color: #000;
+    font-size: 2.8em;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.wrapper p{
+    font-size: 1.1em;
+    font-family: 'Varela Round',sans-serif;
+    font-weight: 500;
+}
+
+.form #guess{
+    font-size: 2em;
+    font-family: 'Varela Round',sans-serif;
+    font-weight: 500;
+}
+
+.guessSubmit{
+    padding: 10px 30px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Varela Round',sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+.resultParas p{
+    font-size: 18px;
+    font-family: 'Varela Round',sans-serif;
+    font-weight: 500;
+}
+
+.guessField{
+    border: 2px groove #333;
+    font-size: 16px;
+    padding: 5px 20px;
+}
+
+#newGame{
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin: auto;
+    background-color: #000;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+#newGame:hover{
+    background-color: rgb(235, 85, 110);
+    color: rgb(55, 0, 128);
+    transition: transorm 0.3s ease;
+}
