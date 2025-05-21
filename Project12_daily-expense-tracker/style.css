@@ -1,0 +1,142 @@
+body{
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input{
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+button:hover{
+    background-color: #44aa72;
+}
+
+.expense ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+
+.expense-list li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+    user-select: none;
+    position: relative;
+    background-color: rgba(73, 66, 66, 0.2);
+    display: flex;
+    align-items: center;
+    transition: .2s ease-in-out;
+}
+
+.expense-list li span{
+    font-weight: bold;   
+}
+
+.expense-list h3{
+    text-align: center;
+}
+
+#total-amount{
+    color: #4CAF50;
+}
+
+.expense-list li:checked{
+    color: #2e2d2d;
+}
+
+
+.expense-list li i{
+    position: absolute;
+    left: 80%;
+    transform: translateX(50%);
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    color: #b9b9b9;
+    text-align: center;
+    line-height: 40px;
+}
+
+.search-container{
+    position: relative;
+    width: 100%;
+
+}
+
+.search-container input{
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 8px;
+}
+
+.search-container button{
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+}
+
+.search-container button:hover{
+    background-color: #44aa72;
+}
+
+.fa-magnifying-glass{
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.fa-magnifying-glass:hover{
+    transform:  scale(1.5);
+}

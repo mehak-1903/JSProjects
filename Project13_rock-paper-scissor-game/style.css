@@ -1,0 +1,98 @@
+body {
+    background: url('https://c8.alamy.com/comp/2BKN10X/seamless-pattern-stone-paper-scissors-game-white-background-isolated-rock-paper-scissors-play-repeating-ornament-question-answer-print-wallpaper-2BKN10X.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    color: #4B0082;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.choices button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    background-color: #800080;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    transition: transform 0.5s ease;
+    background: linear-gradient(120deg, #ee90b7, #8a49df);
+    transform: scale(1.1);
+}
+
+#startGame{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 40px 20px 20px 20px;
+    background-color: #da0243;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    transition: transform 0.5s ease;
+    background: linear-gradient(120deg, #e24f62, #49dfa6);
+    transform: scale(1.1);
+}
+
+
+#result {
+    margin-top: 36px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #b34b31fd;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1b5ff1fd;
+}
+
+
+@media(max-width: 600px) {
+    .container {
+        width: 80%;
+        padding: 15px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #result {
+        margin-top: 30px;
+    }
+
+    #score {
+        margin-top: 90px;
+    }
+}

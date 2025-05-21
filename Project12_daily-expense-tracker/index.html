@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project7: Daily Expense Tracker</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Daily Expense Tracker</h1>
+        <div class="input-container">
+            <input type="text" id="title" placeholder="Expense-title">
+            <input type="number" id="amount" placeholder="Amount">
+            <input type="date" id="expense-date">
+            <button id="add-btn">Add Expense</button>
+        </div>
+
+        <div class="balance-section">
+            <button id="set-income">Set Income</button>
+            <h3>Total: Rs.<span id="total-amount">0</span></h3>
+            <h3>Remaining Amount: Rs.<span id="remaining-amount">0</span></h3>
+            <h4>Total Expenses: Rs.<span id="total-expenses">0</span></h4>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search Your Expense Here." id="searchInput">
+            <button id="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="expense-list">
+            <ul id="expense-list">                
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
+
+
