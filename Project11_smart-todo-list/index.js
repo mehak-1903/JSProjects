@@ -2,6 +2,8 @@ const addBtn = document.getElementById('add-btn');
 const input = document.getElementById('input-box');
 const taskList = document.querySelector('.list-container');
 const allTask = document.getElementById('all');
+const completedTask = document.getElementById('completed');
+const incompletedTask = document.getElementById('pending');
 
 let tasks = [];             // All tasks are stored in this empty list.
 
@@ -9,6 +11,8 @@ let tasks = [];             // All tasks are stored in this empty list.
 
 function saveTask() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
+
+
 }
 
 const savedTask = localStorage.getItem('tasks');
@@ -17,7 +21,7 @@ if (savedTask) {
     showTasks();
 }
 
-// All Task
+// Displaying All Task
 const showingResult = document.querySelector('.todo-app');
 const allResult = document.createElement('h2');
 
@@ -31,6 +35,44 @@ allTask.addEventListener('click', () => {
 
     if(tasks.length === 0){
         allResult.innerHTML = '';
+        allResult.style.color = '#13a1da'
+    }else{
+        allResult.style.color = '#13a1da';
+    }
+})
+
+
+//  Displaying Completed Task
+
+completedTask.addEventListener('click', () => {
+    tasks.innerHTML = '';
+
+    const countCompletedTask = tasks.filter(task => task.done === true);
+    allResult.textContent = `Completed Task: ${countCompletedTask.length}`;
+    
+    if(countCompletedTask.length === 0){
+        allResult.textContent = `No Completed Tasks`;
+        allResult.style.color = 'red';
+    }
+    else{
+        allResult.style.color = '#13a1da';
+    }
+})
+
+
+//  Displaying Pending Task
+
+incompletedTask.addEventListener('click', () => {
+    tasks.innerHTML = '';
+
+    const countIncompletedTask = tasks.filter(task => !(task.done));
+    allResult.textContent = `Incompleted Task: ${countIncompletedTask.length}`;
+
+    if(countIncompletedTask.length === 0){
+        allResult.textContent = `Nothing to Pending here.`;
+        allResult.style.color = 'red';
+    }else{
+        allResult.style.color = '#13a1da';
     }
 })
 
