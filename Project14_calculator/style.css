@@ -1,7 +1,73 @@
-body{
+body {
     background: url('./images/bg-image.jpg');
     background-position: center;
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 550px;
+    width: 400px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 6px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.inputText {
+    height: 30%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.inputText textarea{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    object-fit: cover;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 70%;
+    box-sizing: border-box;
+}
+
+.grid button {
+    color: #fff8f8;
+    background: none;
+    border: 1px solid #a1a1a115;
+    border-left: none;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid button:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.grid button:nth-child(11) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.grid button:hover{
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.grid button:active{
+    background: #14ff47;
+    color: #192f00;
 }
