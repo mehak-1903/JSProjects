@@ -23,9 +23,10 @@ body {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 0;
+    text-align: center;
 }
 
-.inputText textarea{
+.inputText input{
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -33,6 +34,13 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: none;
     object-fit: cover;
+    text-align: right;
+    color: #fff;
+    font-size: 24px;
+}
+
+.inputText input::placeholder{
+    color: #fff;
 }
 
 .grid {
@@ -49,15 +57,14 @@ body {
     border-left: none;
     font-size: 22px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
 }
 
 .grid button:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 3;
     background: rgba(255, 255, 255, 0.05);
 }
 
-.grid button:nth-child(11) {
+.grid button:nth-child(12) {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 4;
