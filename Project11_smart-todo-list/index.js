@@ -11,8 +11,6 @@ let tasks = [];             // All tasks are stored in this empty list.
 
 function saveTask() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
-
-
 }
 
 const savedTask = localStorage.getItem('tasks');
