@@ -158,3 +158,76 @@ input:focus{
     font-size: 16px;
     margin-left: 15px;
 }
+
+@media(max-width: 1023px){
+    .sub-container{
+        width: 40%;
+        height: auto;
+        padding: 30px 20px;
+        margin: 50px auto;
+        border-radius: 20px;
+    }
+
+    input,#exchangeRate {
+        width: 100%;
+        margin: 10px 0;
+        margin-bottom: 15px;
+
+    }
+
+    .currency-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .from, .to{
+        flex: 1;
+    }
+
+    .from select{
+        width: 95%;
+        margin: 0 10px 10px 0;
+    }
+
+    h1{
+        font-size: 24px;
+        display: block;
+    }
+
+    label{
+        font-size: 16px;
+        display: block;
+    }
+}
+
+@media(max-width: 768px){
+    .sub-container{
+        width: 50%;
+        padding: 20px 10px;
+        height: 450px;
+        box-sizing: border-box;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    .circle, .pinkcircle{
+        height: 250px;
+        width: 250px;
+    }
+
+    label{
+        padding: 10px 0;
+    }
+
+    input{
+        font-size: 16px;
+    }
+    
+    #result{
+        font-size: 16px;
+    }
+}
