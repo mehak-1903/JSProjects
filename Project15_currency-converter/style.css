@@ -147,7 +147,8 @@ input:focus{
 .fa-arrow-right-arrow-left{
     color: #fff;
     position: absolute;
-    transform: translate(50%, 10%); 
+    transform: translate(-50%, -50%);
+    font-size: 16px;
 }
 
 #exchangeRate{
