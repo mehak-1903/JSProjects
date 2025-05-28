@@ -204,14 +204,14 @@ input:focus{
 
 @media(max-width: 768px){
     .sub-container{
-        width: 90%;
+        width: 100%;
         padding: 20px 10px;
-        height: 450px;
+        height: 500px;
         box-sizing: border-box;
     }
 
     h1{
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .circle, .pinkcircle{
