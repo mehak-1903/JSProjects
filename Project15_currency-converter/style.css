@@ -204,7 +204,7 @@ input:focus{
 
 @media(max-width: 768px){
     .sub-container{
-        width: 70%;
+        width: 90%;
         padding: 20px 10px;
         height: 450px;
         box-sizing: border-box;
