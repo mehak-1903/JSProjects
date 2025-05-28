@@ -204,7 +204,7 @@ input:focus{
 
 @media(max-width: 768px){
     .sub-container{
-        width: 50%;
+        width: 70%;
         padding: 20px 10px;
         height: 450px;
         box-sizing: border-box;
@@ -226,7 +226,7 @@ input:focus{
     input{
         font-size: 16px;
     }
-    
+
     #result{
         font-size: 16px;
     }
