@@ -11,7 +11,7 @@ const API_KEY = 'af00d95629e9461bb895467b2dfd01d4';
 fetch(`https://api.currencyfreaks.com/v2.0/rates/latest?apikey=${API_KEY}`)
 .then(response => response.json())
 .then(data => {
-    const currencyList = Object.keys(data.rates);
+    const currencyList = Object.keys(data.rates);     // Gives an array of all currency codes.
 
     currencyList.forEach(code => {
         const option1 = document.createElement('option');
@@ -30,3 +30,9 @@ fetch(`https://api.currencyfreaks.com/v2.0/rates/latest?apikey=${API_KEY}`)
     toCurrency.value = "INR";
 })
 .catch(error => console.log('Error', error));
+
+swapBtn.addEventListener('click', () => {
+    let temp = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = temp;
+})
