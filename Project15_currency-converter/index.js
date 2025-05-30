@@ -31,8 +31,35 @@ fetch(`https://api.currencyfreaks.com/v2.0/rates/latest?apikey=${API_KEY}`)
 })
 .catch(error => console.log('Error', error));
 
+// Swap Button.
 swapBtn.addEventListener('click', () => {
     let temp = fromCurrency.value;
     fromCurrency.value = toCurrency.value;
     toCurrency.value = temp;
+})
+
+// Exchange button.
+exchangeBtn.addEventListener('click', () => {
+    const amount = parseFloat(amountInput.value);     // converting string value into number. eg: "100"
+    const from = fromCurrency.value;       // takes selected values into dropdown. (fromCurrency) eg: USD
+    const to = toCurrency.value;           // takes selected values into dropdown. (toCurrency) eg: INR
+
+    if(isNaN(amount) || amount <= 0){        // agr amount NaN/ <=0, toh error message aajega, and function return hojaega.
+        resultBtn.value = "Please enter a valid amount.";
+        return;
+    }
+
+    fetch(`https://api.currencyfreaks.com/v2.0/rates/latest?apikey=${API_KEY}`)
+    .then(res => res.json())
+    .then(data => {
+        const rateFrom = parseFloat(data.rates[from]);   // from USD = "1"
+        const rateTo = parseFloat(data.rates[to]);       // to INR = "83.35"
+
+        const convertedAmount = (amount / rateFrom) * rateTo;        // (100 / 1) * 83.35 = 8335 INR
+        resultBtn.value = `${amount} ${from} = ${convertedAmount.toFixed(2)} ${to}`;
+    })
+    .catch(err => {
+        console.error("Conversion Error: ", err);
+        resultBtn.textContent = "Something went Wrong!!!";
+    })
 })

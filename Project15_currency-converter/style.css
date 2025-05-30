@@ -187,6 +187,9 @@ option:hover, option:checked{
     margin-left: 15px;
 }
 
+#result{
+    text-align: center;
+}
 @media(max-width: 1023px) {
     .sub-container {
         width: 40%;
