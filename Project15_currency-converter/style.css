@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -7,13 +8,13 @@ html, body{
     height: 100%;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     background-color: #04152e;
     height: 100vh;
     width: 100vw;
@@ -24,7 +25,7 @@ html, body{
     align-items: center;
 }
 
-.container h1{
+.container h1 {
     text-align: center;
     color: #fff;
     z-index: 10;
@@ -33,18 +34,18 @@ html, body{
     margin-bottom: 40px;
 }
 
-.circle{
+.circle {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background: linear-gradient( rgb(236, 15, 188), rgb(138, 245, 218));
+    background: linear-gradient(rgb(236, 15, 188), rgb(138, 245, 218));
     position: absolute;
     left: 50%;
     top: -5%;
     z-index: 1;
 }
 
-.pinkcircle{
+.pinkcircle {
     height: 250px;
     width: 250px;
     background: linear-gradient(#ff3a9c, #ff3a3a);
@@ -57,7 +58,7 @@ html, body{
     z-index: 1;
 }
 
-.sub-container{
+.sub-container {
     width: 400px;
     height: 450px;
     border-left: 1px solid #ffffff70;
@@ -67,12 +68,12 @@ html, body{
     box-shadow: 0 10px 5px 0 rgba(255, 255, 255, 0.3);
 }
 
-label{
+label {
     color: #fff;
     padding: 30px;
 }
 
-input{
+input {
     width: 90%;
     height: 40px;
     margin: 15px;
@@ -84,15 +85,15 @@ input{
     border-radius: 10px;
 }
 
-input::selection{
+input::selection {
     border: none;
 }
 
-input::placeholder{
+input::placeholder {
     color: #fff;
 }
 
-input:focus{
+input:focus {
     border-color: rgb(47, 216, 188);
     outline: none;
     box-shadow: 0 0 20px rgb(0, 255, 200);
@@ -100,32 +101,32 @@ input:focus{
     background: transparent;
 }
 
-#exchangeRate{
+#exchangeRate {
     background-color: #fff;
     color: #000 !important;
     border-radius: 5px;
 }
 
-#exchangeRate::placeholder{
+#exchangeRate::placeholder {
     color: #000;
     font-size: 16px;
-    text-align: center;    
+    text-align: center;
 }
 
-.currency-row{
+.currency-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
-.from label{
+.from label {
     color: #fff;
     font-weight: bold;
     min-width: 50px;
 }
 
-.from select{
+.from select {
     display: block;
     margin: 10px 30px;
     padding: 8px;
@@ -136,7 +137,33 @@ input:focus{
     background: rgba(255, 255, 255, 0.1);
 }
 
-#swap{
+
+select {
+    background: #0d1b2a;
+    color: #fff;
+    border: 1px solid #00ffc8;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 130px;
+    appearance: none;      /* Remove default arrow*/
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+option {
+    color: #fff;
+    background: #0d1b2a;
+    padding: 10px;
+}
+
+option:hover, option:checked{
+    background: #00ffc8;
+    color: #000;
+}
+
+#swap {
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -144,14 +171,14 @@ input:focus{
     border: 1px solid #b6b6b6;
 }
 
-.fa-arrow-right-arrow-left{
+.fa-arrow-right-arrow-left {
     color: #fff;
     position: absolute;
     transform: translate(-50%, -50%);
     font-size: 16px;
 }
 
-#exchangeRate{
+#exchangeRate {
     border: none;
     width: 90%;
     padding: 10px;
@@ -160,8 +187,8 @@ input:focus{
     margin-left: 15px;
 }
 
-@media(max-width: 1023px){
-    .sub-container{
+@media(max-width: 1023px) {
+    .sub-container {
         width: 40%;
         height: auto;
         padding: 30px 20px;
@@ -169,66 +196,69 @@ input:focus{
         border-radius: 20px;
     }
 
-    input,#exchangeRate {
+    input,
+    #exchangeRate {
         width: 100%;
         margin: 10px 0;
         margin-bottom: 15px;
 
     }
 
-    .currency-row{
+    .currency-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
     }
 
-    .from, .to{
+    .from,
+    .to {
         flex: 1;
     }
 
-    .from select{
+    .from select {
         width: 95%;
         margin: 0 10px 10px 0;
     }
 
-    h1{
+    h1 {
         font-size: 24px;
         display: block;
     }
 
-    label{
+    label {
         font-size: 16px;
         display: block;
     }
 }
 
-@media(max-width: 768px){
-    .sub-container{
+@media(max-width: 768px) {
+    .sub-container {
         width: 70%;
         padding: 20px 10px;
         height: 500px;
         box-sizing: border-box;
     }
 
-    h1{
+    h1 {
         font-size: 22px;
     }
 
-    .circle, .pinkcircle{
+    .circle,
+    .pinkcircle {
         height: 250px;
         width: 250px;
     }
 
-    label{
+    label {
         padding: 10px 0;
     }
 
-    input{
+    input {
         font-size: 16px;
     }
 
-    #result{
+    #result {
         font-size: 16px;
     }
 }
