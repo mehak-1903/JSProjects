@@ -190,6 +190,7 @@ option:hover, option:checked{
 #result{
     text-align: center;
 }
+
 @media(max-width: 1023px) {
     .sub-container {
         width: 40%;
