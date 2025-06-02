@@ -7,6 +7,7 @@ h1{
     font-family: 'Varela Round', sans-serif;
     font-weight: 600;
 }
+
 .button{
     height: 100px;
     width: 100px;
@@ -30,10 +31,16 @@ h1{
     background-color: green;
 }
 
-#orangered{
-    background-color: orangered;
+#brown{
+    background-color: brown;
 }
 
 #purple{
     background-color: purple;
+}
+
+@media(max-width: 600px) {
+    .button{
+        display: block;
+    }
 }

@@ -15,7 +15,7 @@ button.forEach((button) => {
         else if(e.target.id === 'blue'){
             body.style.backgroundColor = e.target.id;
         }
-        else if(e.target.id === 'orangered'){
+        else if(e.target.id === 'brown'){
             body.style.backgroundColor = e.target.id;
         }
         else if(e.target.id === 'purple'){
