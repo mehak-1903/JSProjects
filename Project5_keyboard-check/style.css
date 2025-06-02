@@ -21,6 +21,15 @@ table,th,td{
 
 .key{
     font-size: 2em;
+    display: block;
+}
+
+input{
+    padding: 15px 30px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 1.3rem;
 }
 
 @media(max-width: 768px){
