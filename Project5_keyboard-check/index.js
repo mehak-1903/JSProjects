@@ -2,7 +2,7 @@ const insert = document.getElementById('insert');
 const inputText = document.getElementById('inputText');
 
 inputText.addEventListener('keydown', (e) => {
-    inputText.innerHTML = `
+    insert.innerHTML = `
     <div class='color'>
         <table>
   <tr>
