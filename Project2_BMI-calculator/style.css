@@ -2,28 +2,44 @@ body{
     background-color: #333;
     text-align: center;
     color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .container{
-    width: 40%;
+    max-width: 40%;
     height: 100%;
     margin: auto;
     text-align: center;
+    padding: 20px;
 }
 
 h1{
     font-family: 'Varela Round', sans-serif;
-    font-size: 1.8em;
+    font-size: 2rem;
+    color: rgb(250, 72, 132);
+    border-bottom: 5px solid rgb(63, 214, 63);
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 p label{
     font-family: 'Varela Round', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 400;
 }
 
+input{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 20px;
+    background: #c0c4b8;
+    font-size: 1.1em;
+}
+
 button{
-    color: rgb(25, 0, 255);
+    color: rgb(187, 34, 110);
     background-color: rgb(35, 179, 172);
     padding: 10px 20px;
     font-size: 1em;
@@ -31,6 +47,7 @@ button{
     font-weight: 600;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 #results{
@@ -47,7 +64,7 @@ button{
 .form-guide{
     margin-top: 20px;
     color: orangered;
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: 'Varela Round', sans-serif;
     font-weight: 400;
 }
@@ -57,4 +74,70 @@ button{
     font-size: 0.9em;
     font-family: 'Varela Round', sans-serif;
     font-weight: 400;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        color: rgb(250, 72, 132);
+        border-bottom: 5px solid rgb(63, 214, 63);
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+
+    p label, .form-guide, .form-guide p {
+        font-size: 1em;
+    }
+
+    input {
+        width: 100%;
+        margin-left: 0;
+        margin: 20px 0;
+    }
+
+    button {
+        width: 100%;
+        margin: 15px auto;
+        font-size: 1.2em;
+    }
+
+    #results {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;  
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        color: rgb(250, 72, 132);
+        border-bottom: 5px solid rgb(63, 214, 63);
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+
+    input, button {
+        font-size: 1em;
+        padding: 10px;
+        width: 90%;
+    }
+
+    #results {
+        font-size: 1.3em;
+    }
 }
