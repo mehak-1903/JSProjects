@@ -39,8 +39,9 @@ h1{
     background-color: purple;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 1024px) {
     .button{
         display: block;
+        margin: 20px auto;
     }
 }
