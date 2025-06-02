@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     background: url('https://images.unsplash.com/photo-1548092372-0d1bd40894a3?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
     min-height: 100vh;
     width: 100vw;
@@ -52,6 +53,11 @@ h1{
     text-align: center;
     color: #fff;
     margin-bottom: 40px;
+}
+
+.card a i{
+    margin-right: 8px;
+    fill:rgba(0, 0, 0, 0.5)
 }
 
 @media(max-width: 600px){
