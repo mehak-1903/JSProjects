@@ -1,5 +1,6 @@
 table,th,td{
     border: 1px solid #e7e7e7;
+    padding: 10px;
 }
 
 .project{
@@ -16,4 +17,14 @@ table,th,td{
     color: aliceblue;
     display: flex;
     flex-direction: row;
+}
+
+.key{
+    font-size: 2em;
+}
+
+@media(max-width: 768px){
+    .key{
+        font-size: 1.5em;
+    }
 }
