@@ -5,6 +5,10 @@ body{
     text-align: center;
 }
 
+h1{
+    font-size: 2rem;
+}
+
 button{
     padding: 10px 40px;
     font-size: 1.2rem;
