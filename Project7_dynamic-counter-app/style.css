@@ -2,6 +2,9 @@ body {
     background-color: #4f4d4d;
     color: #fff;
     text-align: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 h2 {
