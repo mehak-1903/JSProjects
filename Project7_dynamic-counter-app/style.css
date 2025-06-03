@@ -60,15 +60,15 @@ input {
     }
 
     .container {
-        height: 100%;
-        width: 50%;
+        height: auto;
+        width: 80%;
         margin: auto;
         padding: 80px 0;
-        overflow: hidden;
     }
 
     input{
         margin: auto;
+        font-size: 1.1rem;
     }
 }
 
