@@ -252,6 +252,9 @@ function showQuestion() {
         button.innerHTML = answer.text;
         button.classList.add('btn');
         answerBtn.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
         answerBtn.addEventListener('click', selectedAnswer);
     })
 }

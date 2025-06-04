@@ -80,11 +80,13 @@ hr{
 }
 
 .correct{
-    background: #c6ffa5;
+    background: #7eff33;
+    border: none;
 }
 
 .incorrect{
     background: #ff8181;
+    border: none;
 }
 
 /* Responsive */
