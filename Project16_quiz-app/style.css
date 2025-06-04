@@ -45,7 +45,7 @@ hr{
     margin-bottom: 20px;
 }
 
-#next-btn{
+#nextBtn{
     padding: 10px;
     width: 100px;
     border-radius: 10px;
@@ -77,6 +77,14 @@ hr{
     background: #222;
     color: #fff;
     transition: all 0.3s;
+}
+
+.correct{
+    background: #c6ffa5;
+}
+
+.incorrect{
+    background: #ff8181;
 }
 
 /* Responsive */
