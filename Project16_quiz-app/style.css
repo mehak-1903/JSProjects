@@ -85,7 +85,7 @@ hr{
 
 @media(min-width: 601px){
     hr{
-        width: 30%;
+        width: 15%;
     }
     .container{
         width: 90%;
