@@ -81,11 +81,23 @@ hr{
 
 /* Responsive */
 
-@media(max-width: 600px){
+/* For Tablet */
+
+@media(min-width: 601px) and (max-width: 1023px){
     hr{
         width: 30%;
     }
     .container{
-        width: 100%;
+        width: 90%;
+    }
+}
+
+/* For Mobile */
+@media(max-width: 600px){
+    hr{
+        width: 40%;
+    }
+    .container{
+        width: 90%;
     }
 }
