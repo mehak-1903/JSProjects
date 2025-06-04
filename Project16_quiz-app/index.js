@@ -272,7 +272,7 @@ function selectedAnswer(e) {
 
     Array.from(answerBtn.children).forEach(button => {
         if(button.dataset.correct === 'true'){
-            button.classList.add('btn');
+            button.classList.add('correct');
         }
         button.disabled = 'true';
     })
