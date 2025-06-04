@@ -28,7 +28,7 @@ hr{
 }
 
 .container{
-    height: 400px;
+    min-height: 400px;
     width: 60%;
     max-width: 600px;
     margin: 40px auto;
@@ -77,4 +77,15 @@ hr{
     background: #222;
     color: #fff;
     transition: all 0.3s;
+}
+
+/* Responsive */
+
+@media(max-width: 600px){
+    hr{
+        width: 30%;
+    }
+    .container{
+        width: 100%;
+    }
 }
