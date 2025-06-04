@@ -71,12 +71,16 @@ hr{
     font-size: 1.1rem;
     margin: 10px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-.btn:hover{
+.btn:hover:not([disabled]){
     background: #222;
     color: #fff;
-    transition: all 0.3s;
+}
+
+.btn:disabled{
+    cursor: no-drop;
 }
 
 .correct{
