@@ -269,6 +269,14 @@ function selectedAnswer(e) {
     else {
         selectedBtn.classList.add('incorrect');
     }
+
+    Array.from(answerBtn.children).forEach(button => {
+        if(button.dataset.correct === 'true'){
+            button.classList.add('btn');
+        }
+        button.disabled = 'true';
+    })
+    nextBtn.style.display = 'block';
 }
 
 function resetState(){
@@ -276,6 +284,7 @@ function resetState(){
     while(answerBtn.firstChild){
         answerBtn.removeChild(answerBtn.firstChild);
     }
+    
 }
 
 startQuiz()
