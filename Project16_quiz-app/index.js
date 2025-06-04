@@ -243,6 +243,7 @@ function startQuiz() {
 }
 
 function showQuestion() {
+    resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
@@ -259,7 +260,6 @@ function showQuestion() {
     })
 }
 
-
 function selectedAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === 'true';
@@ -271,6 +271,12 @@ function selectedAnswer(e) {
     }
 }
 
+function resetState(){
+    nextBtn.style.display = 'none';
+    while(answerBtn.firstChild){
+        answerBtn.removeChild(answerBtn.firstChild);
+    }
+}
 
 startQuiz()
 
