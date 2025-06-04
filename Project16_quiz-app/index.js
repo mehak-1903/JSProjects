@@ -11,35 +11,35 @@ const questions = [
     {
         question: "Which tag is used to insert an image?",
         answers: [
-            { text: '<img>', correct: true },
-            { text: '<image>', correct: false },
-            { text: '<src>>', correct: false },
-            { text: '<picture>', correct: false }
+            { text: '&lt;img&gt;', correct: true },
+            { text: '&lt;image&gt;', correct: false },
+            { text: '&lt;src&gt;', correct: false },
+            { text: '&lt;picture&gt;', correct: false }
         ]
     },
     {
         question: "Which HTML element is used to define a table row?",
         answers: [
-            { text: "<th>", correct: false },
-            { text: "<td>", correct: false },
-            { text: "<tr>", correct: true },
-            { text: "<table>", correct: false }
+            { text: '&lt;th&gt;', correct: false },
+            { text: '&lt;td&gt;', correct: false },
+            { text: '&lt;table&gt;', correct: false },
+            { text: '&lt;tr&gt;', correct: true }
         ]
     },
     {
         question: "How do you create a link that opens in a new tab?",
         answers: [
-            { text: '<a href="url" target="_new">', correct: false },
-            { text: '<a href="url" target="_tab">', correct: false },
-            { text: '<a href="url" target="_blank">', correct: true },
-            { text: '<a href="url" newtab>', correct: false }
+            { text: '&lt;a href="url" target="_new"&gt;', correct: false },
+            { text: '&lt;a href="url" target="_tab"&gt;', correct: false },
+            { text: '&lt;a href="url" target="_blank"&gt;', correct: true },
+            { text: '&lt;a href="url" newtab&gt;', correct: false }
         ]
     },
     {
         question: "What is a semantic HTML element?",
         answers: [
             { text: "One with class attributes", correct: false },
-            { text: "One that only uses <div>", correct: false },
+            { text: "One that only uses &lt;div&gt;", correct: false },
             { text: "One that clearly describes its meaning", correct: true },
             { text: "One used in CSS", correct: false }
         ]
@@ -49,12 +49,12 @@ const questions = [
         answers: [
             { text: "class", correct: false },
             { text: "style", correct: false },
-            { text: "id", correct: true },
-            { text: "href", correct: false }
+            { text: "href", correct: false },
+            { text: "id", correct: true }
         ]
     },
     {
-        question: "What does the alt attribute in the <img> tag do?",
+        question: "What does the alt attribute in the &lt;img&gt; tag do?",
         answers: [
             { text: "Styles the image", correct: false },
             { text: "Specifies image alignment", correct: false },
@@ -76,8 +76,8 @@ const questions = [
         answers: [
             { text: "font-color", correct: false },
             { text: "text-color", correct: false },
-            { text: "color", correct: true },
-            { text: "background-color", correct: false }
+            { text: "background-color", correct: false },
+            { text: "color", correct: true }
         ]
     },
     {
@@ -110,8 +110,8 @@ const questions = [
     {
         question: "Which of the following is used for responsive design?",
         answers: [
-            { text: "@responsive", correct: false },
             { text: "@media", correct: true },
+            { text: "@responsive", correct: false },
             { text: "@import", correct: false },
             { text: "@viewport", correct: false }
         ]
@@ -128,9 +128,9 @@ const questions = [
     {
         question: "Which display value makes an element inline and allows setting width/height?",
         answers: [
+            { text: "inline-block", correct: true },
             { text: "inline", correct: false },
             { text: "block", correct: false },
-            { text: "inline-block", correct: true },
             { text: "flex", correct: false }
         ]
     },
@@ -166,8 +166,8 @@ const questions = [
         answers: [
             { text: "4", correct: false },
             { text: "NaN", correct: false },
-            { text: "22", correct: true },
-            { text: "undefined", correct: false }
+            { text: "undefined", correct: false },
+            { text: "22", correct: true }
         ]
     },
     {
@@ -184,8 +184,8 @@ const questions = [
         answers: [
             { text: "getElementByClassName()", correct: false },
             { text: "querySelectorAll()", correct: false },
-            { text: "getElementById()", correct: true },
-            { text: "getElementsByTag()", correct: false }
+            { text: "getElementsByTag()", correct: false },
+            { text: "getElementById()", correct: true }
         ]
     },
     {
@@ -200,8 +200,8 @@ const questions = [
     {
         question: "What is the purpose of addEventListener()?",
         answers: [
-            { text: "To create elements", correct: false },
             { text: "To bind a function to an event", correct: true },
+            { text: "To create elements", correct: false },
             { text: "To fetch data", correct: false },
             { text: "To style an element", correct: false }
         ]
@@ -218,14 +218,13 @@ const questions = [
     {
         question: "What does a Promise represent in JavaScript?",
         answers: [
+            { text: "Future completion/failure of an async task", correct: true },
             { text: "A type of loop", correct: false },
             { text: "Immediate value", correct: false },
-            { text: "Future completion/failure of an async task", correct: true },
             { text: "A boolean condition", correct: false }
         ]
     }
 ]
-
 // Adding Variables
 
 const questionElement = document.getElementById('question');
@@ -265,6 +264,7 @@ function selectedAnswer(e) {
     const isCorrect = selectedBtn.dataset.correct === 'true';
     if (isCorrect) {
         selectedBtn.classList.add('correct');
+        score++;
     }
     else {
         selectedBtn.classList.add('incorrect');
@@ -286,6 +286,32 @@ function resetState(){
     }
     
 }
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You Scored ${score} out of ${questions.length}!!!`;
+    nextBtn.innerHTML = "Play Again";
+    nextBtn.style.display = 'block';
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }
+    else{
+        showScore();
+    }
+}
+
+nextBtn.addEventListener('click', () => {
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }
+    else{
+        startQuiz();
+    }
+})
 
 startQuiz()
 
